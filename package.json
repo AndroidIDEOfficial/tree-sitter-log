@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-log",
+  "version": "1.0.0",
+  "description": "Tree Sitter grammar for AndroidIDE logs",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndroidIDEOfficial/tree-sitter-log.git"
+  },
+  "author": "Akash Yadav",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/AndroidIDEOfficial/tree-sitter-log/issues"
+  },
+  "homepage": "https://github.com/AndroidIDEOfficial/tree-sitter-log#readme",
+
+  "tree-sitter": [
+    {
+      "scope": "scope.log",
+      "file-types": [
+        "log"
+      ]
+    }
+  ]
+}
