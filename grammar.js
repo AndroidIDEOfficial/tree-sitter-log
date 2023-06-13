@@ -17,8 +17,8 @@ module.exports = grammar({
       $.time,
       $.pid,
       $.tid,
-      $.priority,
       $.tag,
+      $.priority,
       $.message
     ),
 
@@ -30,7 +30,7 @@ module.exports = grammar({
       '-',
       field("day", $._num)
     ),
-    
+
     time: $ => seq(
       field("hour", $._num),
       ':',
@@ -49,12 +49,12 @@ module.exports = grammar({
       'V'
     ),
 
-    tag: $ => /[^\s][^:]+:/,
+    tag: $ => /[^\s]+/,
 
     ide_tag: $ => /[^\-\d\s]+/,
 
     message: $ =>  $._any,
-    
+
     _any: $ => /[^\s].*[^\s]/,
 
     _num: $ => /[0-9]+/

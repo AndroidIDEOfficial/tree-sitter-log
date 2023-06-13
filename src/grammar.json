@@ -75,11 +75,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "priority"
+          "name": "tag"
         },
         {
           "type": "SYMBOL",
-          "name": "tag"
+          "name": "priority"
         },
         {
           "type": "SYMBOL",
@@ -196,7 +196,7 @@
     },
     "tag": {
       "type": "PATTERN",
-      "value": "[^\\s][^:]+:"
+      "value": "[^\\s]+"
     },
     "ide_tag": {
       "type": "PATTERN",
