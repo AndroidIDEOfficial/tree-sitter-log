@@ -17,8 +17,8 @@ module.exports = grammar({
       $.time,
       $.pid,
       $.tid,
-      $.tag,
       $.priority,
+      $.tag,
       $.message
     ),
 
