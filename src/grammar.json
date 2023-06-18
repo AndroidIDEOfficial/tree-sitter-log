@@ -75,11 +75,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "tag"
+          "name": "priority"
         },
         {
           "type": "SYMBOL",
-          "name": "priority"
+          "name": "tag"
         },
         {
           "type": "SYMBOL",
