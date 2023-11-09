@@ -46,7 +46,9 @@ module.exports = grammar({
       'W',
       'D',
       'I',
-      'V'
+      'V',
+      'F',
+      'S'
     ),
 
     tag: $ => /[^\s]+/,

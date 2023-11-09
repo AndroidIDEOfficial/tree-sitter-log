@@ -140,7 +140,15 @@
     "named": false
   },
   {
+    "type": "F",
+    "named": false
+  },
+  {
     "type": "I",
+    "named": false
+  },
+  {
+    "type": "S",
     "named": false
   },
   {
