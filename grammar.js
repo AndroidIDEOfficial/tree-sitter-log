@@ -10,7 +10,20 @@ module.exports = grammar({
 
     begin_header: $ => seq(repeat1('-'), $._any),
 
-    ide_log_line: $ => seq($.ide_tag, $.priority, $.message),
+    ide_log_line: $ => seq(
+        $.date,
+        $.time,
+        $.priority,
+        $.thread_name,
+        $.tag,
+        $.message
+    ),
+
+    thread_name: $ => seq(
+        '[',
+        field('thread_name', /[^\]]+/),
+        ']'
+    ),
 
     log_line: $ => seq(
       $.date,
@@ -26,6 +39,10 @@ module.exports = grammar({
     tid: $ => $._num,
 
     date: $ => seq(
+      optional(seq(
+          field("year", $._num),
+          '-'
+      )),
       field("month", $._num),
       '-',
       field("day", $._num)
@@ -37,27 +54,26 @@ module.exports = grammar({
       field("min", $._num),
       ':',
       field("sec", $._num),
-      '.',
+      choice('.', ','),
       field("ms", $._num)
     ),
 
     priority: $ => choice(
-      'E',
-      'W',
-      'D',
-      'I',
-      'V',
-      'F',
-      'S'
+      'E', 'ERROR',
+      'W', 'WARN',
+      'I', 'INFO',
+      'D', 'DEBUG',
+      'V', 'VERBOSE',
+      'T', 'TRACE',
+      'F', 'FINE',
+      'S', 'SILENT',
     ),
 
-    tag: $ => /[^\s]+/,
-
-    ide_tag: $ => /[^\-\d\s]+/,
+    tag: $ => /\S+:/,
 
     message: $ =>  $._any,
 
-    _any: $ => /[^\s].*[^\s]/,
+    _any: $ => /\S.*\S/,
 
     _num: $ => /[0-9]+/
   }

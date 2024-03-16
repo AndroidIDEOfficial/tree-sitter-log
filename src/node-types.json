@@ -18,7 +18,7 @@
       "required": true,
       "types": [
         {
-          "type": "ide_tag",
+          "type": "date",
           "named": true
         },
         {
@@ -27,6 +27,18 @@
         },
         {
           "type": "priority",
+          "named": true
+        },
+        {
+          "type": "tag",
+          "named": true
+        },
+        {
+          "type": "thread_name",
+          "named": true
+        },
+        {
+          "type": "time",
           "named": true
         }
       ]
@@ -110,6 +122,11 @@
     "fields": {}
   },
   {
+    "type": "thread_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "tid",
     "named": true,
     "fields": {}
@@ -118,6 +135,10 @@
     "type": "time",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": ",",
+    "named": false
   },
   {
     "type": "-",
@@ -136,7 +157,15 @@
     "named": false
   },
   {
+    "type": "DEBUG",
+    "named": false
+  },
+  {
     "type": "E",
+    "named": false
+  },
+  {
+    "type": "ERROR",
     "named": false
   },
   {
@@ -144,7 +173,15 @@
     "named": false
   },
   {
+    "type": "FINE",
+    "named": false
+  },
+  {
     "type": "I",
+    "named": false
+  },
+  {
+    "type": "INFO",
     "named": false
   },
   {
@@ -152,7 +189,23 @@
     "named": false
   },
   {
+    "type": "SILENT",
+    "named": false
+  },
+  {
+    "type": "T",
+    "named": false
+  },
+  {
+    "type": "TRACE",
+    "named": false
+  },
+  {
     "type": "V",
+    "named": false
+  },
+  {
+    "type": "VERBOSE",
     "named": false
   },
   {
@@ -160,8 +213,16 @@
     "named": false
   },
   {
-    "type": "ide_tag",
-    "named": true
+    "type": "WARN",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
   },
   {
     "type": "tag",

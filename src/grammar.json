@@ -42,7 +42,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "ide_tag"
+          "name": "date"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "time"
         },
         {
           "type": "SYMBOL",
@@ -50,7 +54,36 @@
         },
         {
           "type": "SYMBOL",
+          "name": "thread_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "message"
+        }
+      ]
+    },
+    "thread_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "FIELD",
+          "name": "thread_name",
+          "content": {
+            "type": "PATTERN",
+            "value": "[^\\]]+"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
         }
       ]
     },
@@ -98,6 +131,31 @@
     "date": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "year",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_num"
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "-"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
         {
           "type": "FIELD",
           "name": "month",
@@ -156,8 +214,17 @@
           }
         },
         {
-          "type": "STRING",
-          "value": "."
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "."
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            }
+          ]
         },
         {
           "type": "FIELD",
@@ -178,11 +245,15 @@
         },
         {
           "type": "STRING",
+          "value": "ERROR"
+        },
+        {
+          "type": "STRING",
           "value": "W"
         },
         {
           "type": "STRING",
-          "value": "D"
+          "value": "WARN"
         },
         {
           "type": "STRING",
@@ -190,7 +261,31 @@
         },
         {
           "type": "STRING",
+          "value": "INFO"
+        },
+        {
+          "type": "STRING",
+          "value": "D"
+        },
+        {
+          "type": "STRING",
+          "value": "DEBUG"
+        },
+        {
+          "type": "STRING",
           "value": "V"
+        },
+        {
+          "type": "STRING",
+          "value": "VERBOSE"
+        },
+        {
+          "type": "STRING",
+          "value": "T"
+        },
+        {
+          "type": "STRING",
+          "value": "TRACE"
         },
         {
           "type": "STRING",
@@ -198,17 +293,21 @@
         },
         {
           "type": "STRING",
+          "value": "FINE"
+        },
+        {
+          "type": "STRING",
           "value": "S"
+        },
+        {
+          "type": "STRING",
+          "value": "SILENT"
         }
       ]
     },
     "tag": {
       "type": "PATTERN",
-      "value": "[^\\s]+"
-    },
-    "ide_tag": {
-      "type": "PATTERN",
-      "value": "[^\\-\\d\\s]+"
+      "value": "\\S+:"
     },
     "message": {
       "type": "SYMBOL",
@@ -216,7 +315,7 @@
     },
     "_any": {
       "type": "PATTERN",
-      "value": "[^\\s].*[^\\s]"
+      "value": "\\S.*\\S"
     },
     "_num": {
       "type": "PATTERN",

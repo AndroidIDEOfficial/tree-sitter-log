@@ -56,36 +56,47 @@
 )
 
 (ide_log_line
-  (ide_tag) @err.tag
+  (date) @err.date
+  (time) @err.time
   (priority) @err.priority
+  (thread_name) @err.thread_name
+  (tag) @err.tag
   (message) @err.msg
-  (#match? @err.priority "E")
+  (#match? @err.priority "ERROR")
 )
 
 (ide_log_line
-  (ide_tag) @warn.tag
+  (date) @warn.date
+  (time) @warn.time
   (priority) @warn.priority
-  (message) @warn.msg
-  (#match? @warn.priority "W")
+  (thread_name) @warn.thread_name
+  (tag) @warn.tag
+  (#match? @warn.priority "WARN")
 )
 
 (ide_log_line
-  (ide_tag) @info.tag
+  (date) @info.date
+  (time) @info.time
   (priority) @info.priority
-  (message) @info.msg
-  (#match? @info.priority "I")
+  (thread_name) @info.thread_name
+  (tag) @info.tag
+  (#match? @info.priority "INFO")
 )
 
 (ide_log_line
-  (ide_tag) @debug.tag
+  (date) @debug.date
+  (time) @debug.time
   (priority) @debug.priority
-  (message) @debug.msg
-  (#match? @debug.priority "D")
+  (thread_name) @debug.thread_name
+  (tag) @debug.tag
+  (#match? @debug.priority "DEBUG")
 )
 
 (ide_log_line
-  (ide_tag) @verbose.tag
+  (date) @verbose.date
+  (time) @verbose.time
   (priority) @verbose.priority
-  (message) @verbose.msg
-  (#match? @verbose.priority "V")
+  (thread_name) @verbose.thread_name
+  (tag) @verbose.tag
+  (#match? @verbose.priority "TRACE")
 )

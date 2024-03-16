@@ -1,0 +1,125 @@
+====
+simple error
+====
+
+03-16 16:52:48.142  1537  1537 E vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple warning
+====
+
+03-16 16:52:48.142  1537  1537 W vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple info
+====
+
+03-16 16:52:48.142  1537  1537 I vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple debug
+====
+
+03-16 16:52:48.142  1537  1537 D vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple verbose
+====
+
+03-16 16:52:48.142  1537  1537 V vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple fine
+====
+
+03-16 16:52:48.142  1537  1537 F vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
+
+====
+simple silent
+====
+
+03-16 16:52:48.142  1537  1537 S vendor.oplus.hardware.charger@1.0-service: getPsyUsbType type: USB_CDP is usb charging.
+
+---
+
+(logs
+  (log_line
+    (date)
+    (time)
+    (pid)
+    (tid)
+    (priority)
+    (tag)
+    (message)))
